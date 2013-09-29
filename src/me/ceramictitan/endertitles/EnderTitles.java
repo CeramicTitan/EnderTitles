@@ -67,7 +67,7 @@ public class EnderTitles extends JavaPlugin implements Listener{
 	    Player p = (Player)sender;
 	    if(args.length == 2 && p.isOp()){
 		if(args[0].equalsIgnoreCase("create")){
-		    handler.registerNewTitle(p,args[1]);
+		    handler.registerNewTitle(p,args[1].replaceAll("_", " "));
 		    return true;
 		}else if(args[0].equalsIgnoreCase("delete")){
 		    handler.deleteTitle(p,Integer.valueOf(args[1]));
