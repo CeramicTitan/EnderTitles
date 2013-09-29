@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Logger;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -80,6 +81,8 @@ public class EnderTitles extends JavaPlugin implements Listener{
 		    p.sendMessage("ID "+Integer.valueOf(args[1])+ ": " +handler.getMessage(Integer.valueOf(args[1])));
 		    return true;
 		}
+	    }else{
+		sender.sendMessage(ChatColor.RED+"Invalid: Operators can only use command");
 	    }
 	}
 	return false;
