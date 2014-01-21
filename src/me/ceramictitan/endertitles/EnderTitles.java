@@ -25,6 +25,7 @@ public class EnderTitles extends JavaPlugin implements Listener{
 
 
     @Override
+    //This is an IntelliJ test.
     public void onEnable(){
 	log = getLogger();
 	getServer().getPluginManager().registerEvents(this, this);
